@@ -30,7 +30,8 @@ app.use(cors({
 }));
   
 //database creation if not exists
-const {Client}  = require('pg');
+//const {Client}  = require('pg');
+const {Client} = require('mysql');
 
 const client = new Client({
     user: DB_USERNAME,
@@ -53,7 +54,7 @@ async function DatabaseInit() {
 
 }
 
-//DatabaseInit();
+DatabaseInit();
 
 
 
